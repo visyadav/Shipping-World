@@ -6,18 +6,39 @@
     <title>Shipping World</title>
     <link rel="stylesheet" href="output.css" />
     <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-gray-100">
-    <!-- Nav component -->
-    <nav class="bg-white bg-opacity-10 border-b border-gray-200 shadow-xl fixed top-0 z-10  backdrop-filter backdrop-blur-lg">
-        <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
-            <a href="home.html" class="text-gray-100 dark:text-gray-950 border-b-2 border-blue-500 mx-1.5 sm:mx-6">home</a>
-    
-            <a href="services.html" class="border-b-2 border-transparent text-gray-800  hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">Services</a>
-    
-            <a href="about1.html" class="border-b-2 border-transparent text-gray-800 hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">About</a>
-    
-            <a href="contact.html" class="border-b-2 border-transparent text-gray-800 hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">Contact</a>
+    <style>
+      .active-link {
+      border-bottom-color: #1E3A8A; /* Customize the color as needed */
+      color: #1E3A8A; /* Customize the color as needed */
+  }
+  /* Define the keyframe animation */
+@keyframes sweep-right {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Apply the sweep animation and blue glow on hover */
+.inline-flex:hover {
+    background: linear-gradient(120deg, #4576ff, #b7d2ff, #0044ff);
+    background-size: 200% 200%;
+    animation: sweep-right 0.4s ease forwards;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6); /* Blue glow */
+}
+
+     </style>
+    </head>
+    <body class="bg-gray-100">
+      <!-- Nav component -->
+      <nav class="bg-white bg-opacity-10 border-b border-gray-200 shadow-xl fixed top-0 z-10 backdrop-filter backdrop-blur-lg">
+        <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300 relative">
+            <a href="home.html" class="nav-link border-b-2 border-transparent text-gray-800 hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">Home</a>
+            <a href="services.html" class="nav-link border-b-2 border-transparent text-gray-800 hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">Services</a>
+            <a href="about1.html" class="nav-link border-b-2 border-transparent text-gray-800 hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">About</a>
+            <a href="contact.html" class="nav-link border-b-2 border-transparent text-gray-800 hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">Contact</a>
         </div>
     </nav>
 
@@ -27,38 +48,42 @@
 
 
     <div class="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0 mt-[2vw]">
-        <div class="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
-          <svg class="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block" viewBox="0 0 100 100" fill="currentColor" preserveAspectRatio="none slice">
+      <div class="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
+        <svg class="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block" viewBox="0 0 100 100" fill="currentColor" preserveAspectRatio="none slice">
             <path d="M50 0H100L50 100H0L50 0Z"></path>
-          </svg>
-          <img
+        </svg>
+        <video
+            id="myVideo"
             class="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-            src="Image/cargo-ship-5724401_1280.jpg"
-            alt=""
-          />
-        </div>
+            controls
+            autoplay
+            muted
+        >
+            Your browser does not support the video tag.
+        </video>
+    </div>
         <div class="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
             <div class="mb-16 lg:my-40 lg:max-w-[60rem] lg:pr-5 bg-opacity-60  backdrop-filter backdrop-blur-sm p-8 rounded-md">
               <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                Shipping World
+                COMBINE CLEARING FORWARDING PTV LTD
               </p>
               <h2 class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
                 About Us<br class="hidden md:block" />
-                <h2 class="pr-5 mb-5 text-base text-gray-700 md:text-lg">Reliable Shipping Services for a Changing World</h2>
+                <h2 class="pr-5 mb-5 text-base text-gray-700 md:text-lg"><!-- Add slogan here --></h2>
                 <span class="inline-block text-deep-purple-accent-400"></span>
               </h2>
               <p class="pr-5 mb-5 text-base text-gray-950 md:text-lg">
-                We are one of the leading service providers in the field of international freight forwarding and custom brokerage of import export cargo. We are strategically located in New Delhi with regional branch offices across the country to serve our clients with freight services within specified time frame. It helps us to dispatch the import and export goods to the desired destination at a very low cost. We provide a gamut of services like Air/Sea import and export services, import and export consultation, warehousing and cargo, transportation facilities. We do it with the help of our diligent team who are
+                We have bee trusted company working in this industry for the past 30-Years helping companies with custom clearence, forwarding & transportation and warehousing.
               </p>
               <div class="flex items-center">
                 <a
-                  href="contact.html"
-                  class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-slate-800 transition duration-200 rounded shadow-xl border-2 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                    href="contact.html"
+                    class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-slate-800 transition duration-200 rounded shadow-xl border-2 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                 >
-                  Get started
+                    Get started
                 </a>
                 <!-- <a href="/" aria-label="" class="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700">Learn more</a> -->
-              </div>
+            </div>
             </div>
           </div>
           
@@ -199,5 +224,27 @@
           </p>
         </div>
       </footer>
+      <script>
+        const video = document.getElementById('myVideo');
+        const videos = [
+            'Image/23759-337232393_small.mp4',
+            'Image/24255-341474048_small.mp4',
+            'Image/container_terminal_-_23008 (1080p).mp4'
+        ];
+        
+        let videoIndex = 0;
+        
+        video.src = videos[videoIndex];
+        
+        video.addEventListener('ended', () => {
+            videoIndex++;
+            if (videoIndex < videos.length) {
+                video.src = videos[videoIndex];
+                video.play();
+            }
+        });
+        
+        </script>
+      <script src="script.js"></script>
 </body>
 </html>

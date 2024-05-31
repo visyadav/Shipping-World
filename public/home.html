@@ -6,276 +6,97 @@
     <title>Shipping World</title>
     <link rel="stylesheet" href="output.css" />
     <link rel="stylesheet" href="style.css">
+   <style>
+    .active-link {
+    border-bottom-color: #1E3A8A; /* Customize the color as needed */
+    color: #1E3A8A; /* Customize the color as needed */
+}
+/* Define the keyframe animation */
+@keyframes sweep-right {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Apply the sweep animation and blue glow on hover */
+.inline-flex:hover {
+    background: linear-gradient(120deg, #4576ff, #b7d2ff, #0044ff);
+    background-size: 200% 200%;
+    animation: sweep-right 0.4s ease forwards;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6); /* Blue glow */
+}
+
+   </style>
   </head>
   <body class="bg-gray-100">
-    <!-- <nav class="bg-gray-800 shadow-2xl">
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-           
-            <button
-              type="button"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-            >
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open main menu</span>
-              
-              <svg
-                class="block h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-             
-              <svg
-                class="hidden h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
-          >
-            
-            <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4">
-                
-                <a
-                  href="#"
-                  class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                  aria-current="page"
-                  >Home</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >About Us</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >Contact</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >Team</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-          >
-            
-
-            
-            <div class="relative ml-3">
-              <div>
-                <button
-                  type="button"
-                  class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                  id="user-menu-button"
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                >
-                  <span class="absolute -inset-1.5"></span>
-                  <span class="sr-only">Open user menu</span>
-                  <img
-                    class="h-8 w-8 rounded-full"
-                    src="Image/android-chrome-192x192.png"
-                    alt=""
-                  />
-                </button>
-              </div>
-
-             
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="sm:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2">
-          
-          <a
-            href="#"
-            class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-            aria-current="page"
-            >Dashboard</a
-          >
-          <a
-            href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >Team</a
-          >
-          <a
-            href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >Projects</a
-          >
-          <a
-            href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >Calendar</a
-          >
-        </div>
-      </div>
-    </nav> -->
-
     <!-- Nav component -->
-    <nav class="bg-white bg-opacity-10 border-b border-gray-200 shadow-xl fixed top-0 z-10  backdrop-filter backdrop-blur-lg">
-      <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
-          <a href="home.html" class="text-gray-100 dark:text-gray-950 border-b-2 border-blue-500 mx-1.5 sm:mx-6">home</a>
-  
-          <a href="services.html" class="border-b-2 border-transparent text-gray-800  hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">Services</a>
-  
-          <a href="about1.html" class="border-b-2 border-transparent text-gray-800 hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">About</a>
-  
-          <a href="contact.html" class="border-b-2 border-transparent text-gray-800 hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">Contact</a>
+    <nav class="bg-white bg-opacity-10 border-b border-gray-200 shadow-xl fixed top-0 z-10 backdrop-filter backdrop-blur-lg">
+      <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300 relative">
+          <a href="home.html" class="nav-link border-b-2 border-transparent text-gray-800 hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">Home</a>
+          <a href="services.html" class="nav-link border-b-2 border-transparent text-gray-800 hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">Services</a>
+          <a href="about1.html" class="nav-link border-b-2 border-transparent text-gray-800 hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">About</a>
+          <a href="contact.html" class="nav-link border-b-2 border-transparent text-gray-800 hover:text-gray-800 dark:hover:text-gray-400 duration-300 ease-in-out hover:border-blue-500 mx-1.5 sm:mx-6">Contact</a>
       </div>
   </nav>
   
-
-    <!-- Hero section  -->
-
-
-    <div class="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0 mt-[2vw]">
+  
+  
+  <!-- Hero section  -->
+  
+  <div class="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0 mt-[2vw]">
       <div class="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
           <svg class="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block" viewBox="0 0 100 100" fill="currentColor" preserveAspectRatio="none slice">
-            <path d="M50 0H100L50 100H0L50 0Z"></path>
+              <path d="M50 0H100L50 100H0L50 0Z"></path>
           </svg>
-          <img
-            class="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-            src="Image/cargo-ship-5724401_1280.jpg"
-            alt=""
-          />
-        </div>
-        <div class="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
-          <div class="mb-16 lg:my-40 lg:max-w-[60rem] lg:pr-5 bg-opacity-60  backdrop-filter backdrop-blur-sm p-8 rounded-md">
-            <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-              Brand new
-            </p>
-            <h2 class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              Shipping World<br class="hidden md:block" />
-              <h2 class="pr-5 mb-5 text-base text-gray-700 md:text-lg">Reliable Shipping Services for a Changing World</h2>
-              <span class="inline-block text-deep-purple-accent-400"></span>
-            </h2>
-            <p class="pr-5 mb-5 text-base text-gray-950 md:text-lg">
-                Embrace seamless global connectivity with our shipping solutions, ensuring efficient logistics and reliable delivery for businesses worldwide. Trust us as your dedicated shipping partner committed to navigating the complexities of international trade with excellence.
-            </p>
-            <div class="flex items-center">
-              <a
-                href="contact.html"
-                class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-slate-800 transition duration-200 rounded shadow-xl  border-2 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              >
-                Get started
-              </a>
-              <!-- <a href="/" aria-label="" class="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700">Learn more</a> -->
-            </div>
-          </div>
-        </div>
+          <video
+              id="myVideo"
+              class="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+              controls
+              autoplay
+              muted
+          >
+              Your browser does not support the video tag.
+          </video>
       </div>
-    <!--
-  Heads up! 👋
-
-  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
--->
-
-    <!-- <section class="relative bg-[] bg-cover bg-center bg-no-repeat">
-      <div
-        class="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
-      ></div>
-
-      <div
-        class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
-      >
-        <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-          <h1 class="text-3xl font-extrabold sm:text-5xl">
-            Reliable Shipping Services for a Changing World
-
-            <strong class="block font-extrabold text-rose-700">
-              Forever Home.
-            </strong>
-          </h1>
-
-          <p class="mt-4 max-w-lg sm:text-xl/relaxed">
-            Embrace seamless global connectivity with our shipping solutions, ensuring efficient logistics and reliable delivery for businesses worldwide. Trust us as your dedicated shipping partner committed to navigating the complexities of international trade with excellence.
-          </p>
-
-          <div class="mt-8 flex flex-wrap gap-4 text-center">
-            <a
-              href="#"
-              class="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
-            >
-              Get Started
-            </a>
-
-            <a
-              href="#"
-              class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
-            >
-              Learn More
-            </a>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- <div class="relative z-20 flex items-center bg-white dark:bg-gray-800">
-
-    <div class="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
-        <div class="flex flex-col">
-            <h1 class="w-full text-4xl font-light text-center text-gray-800 uppercase sm:text-5xl dark:text-white">
-                Reliable Shipping Services for a Changing World
-            </h1>
-            <h2 class="w-full max-w-2xl py-8 mx-auto text-xl font-light text-center text-gray-500 dark:text-white">
-                Embrace seamless global connectivity with our shipping solutions, ensuring efficient logistics and reliable delivery for businesses worldwide. Trust us as your dedicated shipping partner committed to navigating the complexities of international trade with excellence.
-            </h2>
-            <div class="flex items-center justify-center mt-4">
-                <a href="#" class="px-4 py-2 mr-4 text-white uppercase bg-gray-800 border-2 border-transparent text-md hover:bg-gray-900">
-                    Read more
+      <div class="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
+          <div class="mb-16 lg:my-40 lg:max-w-[60rem] lg:pr-5 bg-opacity-60 backdrop-filter backdrop-blur-sm p-8 rounded-md">
+              <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                  <!-- Brand new -->
+              </p>
+              <h2 class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                  Combine Clearing Forwarding Pvt Ltd<br class="hidden md:block" />
+                  <h2 class="pr-5 mb-5 text-base text-gray-700 md:text-lg">Reliable Shipping Services for a Changing World</h2>
+                  <span class="inline-block text-deep-purple-accent-400"></span>
+              </h2>
+              <p class="pr-5 mb-5 text-base text-gray-950 md:text-lg">
+                  We have been working around the globe for a while and there is no limit for expansion & customer service and customer profitability
+              </p>
+              <div class="flex items-center">
+                <a
+                    href="contact.html"
+                    class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-slate-800 transition duration-200 rounded shadow-xl border-2 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                >
+                    Get started
                 </a>
-                <a href="#" class="px-4 py-2 text-gray-800 uppercase bg-transparent border-2 border-gray-800 dark:text-white hover:bg-gray-800 hover:text-white text-md">
-                    Quote
-                </a>
+                <!-- <a href="/" aria-label="" class="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700">Learn more</a> -->
             </div>
-        </div>
-        <div class="relative block w-[100%] mx-auto mt-6 md:mt-0">
-            <img src="Image/cargo-ship-6598149_1280.jpg" class="max-w-xs m-auto md:max-w-2xl"/>
-        </div>
-    </div>
-</div> -->
-
+            
+          </div>
+      </div>
+  </div>
+  
+  
 <section class="m-4 md:m-8 bg-gray-100 dark:text-white rounded-lg">
 	<div class="container mx-auto space-y-12 mt-[2vw]">
 		<div class="flex flex-col overflow-hidden rounded-md shadow-xl lg:flex-row mt-[3vw]">
 			<img src="Image/cargo-ship-6598149_1280.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
 			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
 				<span class="text-xs uppercase dark:text-gray-400">Service</span>
-				<h3 class="text-3xl font-bold">Import Export Services</h3>
-				<p class="my-6 dark:text-gray-400">Leading Service Provider of Import Export Services, Pre Import & Pre Export Consultation Services and Air/Sea Freight Export Services from New Delhi.</p>
+				<h3 class="text-3xl font-bold">Internationl Services(Corier)</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Leading Service Provider of Import Export Services, Pre Import & Pre Export Consultation Services and Air/Sea Freight Export Services from New Delhi.</p> -->
 				<button type="button" class="self-start">Read more</button>
 			</div>
 		</div>
@@ -283,18 +104,108 @@
 			<img src="Image/port-7418239_1280.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
 			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
 				<span class="text-xs uppercase dark:text-gray-400">Service</span>
-				<h3 class="text-3xl font-bold">AIR & Sea Freight Import Services</h3>
-				<p class="my-6 dark:text-gray-400">Prominent & Leading Service Provider from New Delhi, we offer AIR & Sea Freight Import Services, Cargo Monitoring Services and Sea Freight Import Services.</p>
-				<button type="button" class="self-start">Read more</button>
+				<h3 class="text-3xl font-bold">Shipping Services</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Prominent & Leading Service Provider from New Delhi, we offer AIR & Sea Freight Import Services, Cargo Monitoring Services and Sea Freight Import Services.</p> -->
+				<!-- <button type="button" class="self-start">Read more</button> -->
 			</div>
 		</div>
 		<div class="flex flex-col overflow-hidden rounded-md shadow-xl lg:flex-row">
 			<img src="Image/ship-6794508_1280.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
 			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
 				<span class="text-xs uppercase dark:text-gray-400">Service</span>
-				<h3 class="text-3xl font-bold">We're not reinventing the wheel</h3>
-				<p class="my-6 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
-				<button type="button" class="self-start">Read more</button>
+				<h3 class="text-3xl font-bold">Sea Freight Forwarding</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
+				<button type="button" class="self-start">Read more</button> -->
+			</div>
+		</div>
+    <div class="flex flex-col overflow-hidden rounded-md shadow-xl lg:flex-row-reverse">
+			<img src="Image/container-ship-283643_1920.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
+			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+				<span class="text-xs uppercase dark:text-gray-400">Service</span>
+				<h3 class="text-3xl font-bold">International Shipping Services</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Prominent & Leading Service Provider from New Delhi, we offer AIR & Sea Freight Import Services, Cargo Monitoring Services and Sea Freight Import Services.</p>
+				<button type="button" class="self-start">Read more</button> -->
+			</div>
+		</div>
+    <div class="flex flex-col overflow-hidden rounded-md shadow-xl lg:flex-row">
+			<img src="Image/call-center-8022155_1920.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
+			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+				<span class="text-xs uppercase dark:text-gray-400">Service</span>
+				<h3 class="text-3xl font-bold">Shiping Agent Service</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
+				<button type="button" class="self-start">Read more</button> -->
+			</div>
+		</div>
+    <div class="flex flex-col overflow-hidden rounded-md shadow-xl lg:flex-row-reverse">
+			<img src="Image/airport-687256_1920.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
+			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+				<span class="text-xs uppercase dark:text-gray-400">Service</span>
+				<h3 class="text-3xl font-bold">International Cargo</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Prominent & Leading Service Provider from New Delhi, we offer AIR & Sea Freight Import Services, Cargo Monitoring Services and Sea Freight Import Services.</p>
+				<button type="button" class="self-start">Read more</button> -->
+			</div>
+		</div>
+    <div class="flex flex-col overflow-hidden rounded-md shadow-xl lg:flex-row">
+			<img src="Image/container-2602812_1920.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
+			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+				<span class="text-xs uppercase dark:text-gray-400">Service</span>
+				<h3 class="text-3xl font-bold">Buger Consolidation</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
+				<button type="button" class="self-start">Read more</button> -->
+			</div>
+		</div>
+    <div class="flex flex-col overflow-hidden rounded-md shadow-xl lg:flex-row-reverse">
+			<img src="Image/container-2687008_1920.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
+			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+				<span class="text-xs uppercase dark:text-gray-400">Service</span>
+				<h3 class="text-3xl font-bold">LCL & FCL</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Prominent & Leading Service Provider from New Delhi, we offer AIR & Sea Freight Import Services, Cargo Monitoring Services and Sea Freight Import Services.</p>
+				<button type="button" class="self-start">Read more</button> -->
+			</div>
+		</div>
+    <div class="flex flex-col overflow-hidden rounded-md shadow-xl lg:flex-row">
+			<img src="Image/ship-6794508_1280.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
+			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+				<span class="text-xs uppercase dark:text-gray-400">Service</span>
+				<h3 class="text-3xl font-bold">International Logistic Solution</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
+				<button type="button" class="self-start">Read more</button> -->
+			</div>
+		</div>
+    <div class="flex flex-col overflow-hidden rounded-md shadow-xl lg:flex-row-reverse">
+			<img src="Image/ship-3779205_1920.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
+			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+				<span class="text-xs uppercase dark:text-gray-400">Service</span>
+				<h3 class="text-3xl font-bold">DDP Shipment</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Prominent & Leading Service Provider from New Delhi, we offer AIR & Sea Freight Import Services, Cargo Monitoring Services and Sea Freight Import Services.</p>
+				<button type="button" class="self-start">Read more</button> -->
+			</div>
+		</div>
+    <div class="flex flex-col overflow-hidden rounded-md shadow-xl lg:flex-row">
+			<img src="Image/shipping-3578733_1920.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
+			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+				<span class="text-xs uppercase dark:text-gray-400">Service</span>
+				<h3 class="text-3xl font-bold">Container Load Service</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
+				<button type="button" class="self-start">Read more</button> -->
+			</div>
+		</div>
+    <div class="flex flex-col overflow-hidden rounded-md shadow-xl lg:flex-row-reverse">
+			<img src="Image/laptop-3196481_1920.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
+			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+				<span class="text-xs uppercase dark:text-gray-400">Service</span>
+				<h3 class="text-3xl font-bold">Freight Broker Service</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Prominent & Leading Service Provider from New Delhi, we offer AIR & Sea Freight Import Services, Cargo Monitoring Services and Sea Freight Import Services.</p>
+				<button type="button" class="self-start">Read more</button> -->
+			</div>
+		</div>
+    <div class="flex flex-col overflow-hidden rounded-md shadow-xl lg:flex-row">
+			<img src="Image/cargo-8001610_1920.jpg" alt="" class="h-80 dark:bg-gray-500 aspect-video">
+			<div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+				<span class="text-xs uppercase dark:text-gray-400">Service</span>
+				<h3 class="text-3xl font-bold">Door to Porl Service</h3>
+				<!-- <p class="my-6 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
+				<button type="button" class="self-start">Read more</button> -->
 			</div>
 		</div>
 	</div>
@@ -304,7 +215,7 @@
     <!-- Feature Section  -->
     <section class="m-4 md:m-8 bg-gray-100 dark:text-black rounded-lg">
         <div class="container mx-auto p-4 my-6 space-y-2 text-center mt-[4vw]">
-            <h2 class="text-5xl font-bold">Built to empower every team</h2>
+            <h2 class="text-5xl font-bold">Freight Forwarding Services</h2>
             <p class="dark:text-gray-400"></p>
         </div>
         <div class="container mx-auto grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -312,7 +223,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
                     <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
                 </svg>
-                <h3 class="my-3 text-3xl font-semibold">Import Export Services</h3>
+                <h3 class="my-3 text-3xl font-semibold">International Services(Corier)</h3>
                 <div class="space-y-1 leadi">
                     <p>Leading Service Provider of Pre Import & Pre Export Consultation Services, Air/Sea Freight Export Services and Import Export Services from New Delhi.</p>
                     <!-- <p>Export Consultation Services, Air/Sea Freight</p>
@@ -323,7 +234,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
                     <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
                 </svg>
-                <h3 class="my-3 text-3xl font-semibold">Air Freight Import & Export Services</h3>
+                <h3 class="my-3 text-3xl font-semibold">Shipping Services</h3>
                 <div class="space-y-1 leadi">
                     <p>We are engaged in providing reliable Air Freight Forwarding Import & Export Services to the esteemed customers.</p>
                     <!-- <p>Tempore quasi porro</p>
@@ -334,7 +245,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
                     <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
                 </svg>
-                <h3 class="my-3 text-3xl font-semibold">Custom Clearing Agent</h3>
+                <h3 class="my-3 text-3xl font-semibold">Sea Freight Forwarding</h3>
                 <div class="space-y-1 leadi">
                     <p>We have maintained a full-fledged custom clearance division that takes care of all customs related issues for our customers. </p>
                     <!-- <p>Tempore quasi porro</p>
@@ -345,7 +256,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
                     <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
                 </svg>
-                <h3 class="my-3 text-3xl font-semibold">Cargo Services</h3>
+                <h3 class="my-3 text-3xl font-semibold">International Shipping Services</h3>
                 <div class="space-y-1 leadi">
                     <p>Prominent & Leading Service Provider from New Delhi, we offer AIR & Sea Freight Import Services, Cargo Monitoring Services and Sea Freight Import Services.</p>
                     <!-- <p>Tempore quasi porro</p>
@@ -356,7 +267,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
                     <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
                 </svg>
-                <h3 class="my-3 text-3xl font-semibold">Logistics Consulting Services</h3>
+                <h3 class="my-3 text-3xl font-semibold">Shipping Agent Service</h3>
                 <div class="space-y-1 leadi">
                     <p>Backed by a team of experts, we are engaged in offering our clients with Logistics Consultancy Services. We provide consultations of DGFT works to the clients. Our logistic consultants hold profound knowledge of the cargo loading, unloading and transporting. </p>
                     <!-- <p>Tempore quasi porro</p>
@@ -367,7 +278,84 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
                     <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
                 </svg>
-                <h3 class="my-3 text-3xl font-semibold">Combine Sea Air Logistics Services</h3>
+                <h3 class="my-3 text-3xl font-semibold">International Cargo</h3>
+                <div class="space-y-1 leadi">
+                    <p>Offered by us are reliable services for Combine Sea Air Logistics Services. for this, we have associations with reliable carriers that support us in safely delivering the goods to the desired place in a timely manner. </p>
+                    <!-- <p>Tempore quasi porro</p>
+                    <p>Blanditiis aut mollitia ex</p> -->
+                </div>
+            </div>
+            <div class="flex flex-col items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="my-3 text-3xl font-semibold">Buger Consolidation</h3>
+                <div class="space-y-1 leadi">
+                    <p>Offered by us are reliable services for Combine Sea Air Logistics Services. for this, we have associations with reliable carriers that support us in safely delivering the goods to the desired place in a timely manner. </p>
+                    <!-- <p>Tempore quasi porro</p>
+                    <p>Blanditiis aut mollitia ex</p> -->
+                </div>
+            </div>
+            <div class="flex flex-col items-center p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
+                  <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+              </svg>
+              <h3 class="my-3 text-3xl font-semibold">LCL & FCL</h3>
+              <div class="space-y-1 leadi">
+                  <p>Offered by us are reliable services for Combine Sea Air Logistics Services. for this, we have associations with reliable carriers that support us in safely delivering the goods to the desired place in a timely manner. </p>
+                  <!-- <p>Tempore quasi porro</p>
+                  <p>Blanditiis aut mollitia ex</p> -->
+              </div>
+            </div>
+            <div class="flex flex-col items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="my-3 text-3xl font-semibold">International Logistic Solution</h3>
+                <div class="space-y-1 leadi">
+                    <p>Offered by us are reliable services for Combine Sea Air Logistics Services. for this, we have associations with reliable carriers that support us in safely delivering the goods to the desired place in a timely manner. </p>
+                    <!-- <p>Tempore quasi porro</p>
+                    <p>Blanditiis aut mollitia ex</p> -->
+                </div>
+            </div>
+            <div class="flex flex-col items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="my-3 text-3xl font-semibold">DDP Shipment</h3>
+                <div class="space-y-1 leadi">
+                    <p>Offered by us are reliable services for Combine Sea Air Logistics Services. for this, we have associations with reliable carriers that support us in safely delivering the goods to the desired place in a timely manner. </p>
+                    <!-- <p>Tempore quasi porro</p>
+                    <p>Blanditiis aut mollitia ex</p> -->
+                </div>
+            </div>
+            <div class="flex flex-col items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="my-3 text-3xl font-semibold">Container Load SErvice</h3>
+                <div class="space-y-1 leadi">
+                    <p>Offered by us are reliable services for Combine Sea Air Logistics Services. for this, we have associations with reliable carriers that support us in safely delivering the goods to the desired place in a timely manner. </p>
+                    <!-- <p>Tempore quasi porro</p>
+                    <p>Blanditiis aut mollitia ex</p> -->
+                </div>
+            </div>
+            <div class="flex flex-col items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="my-3 text-3xl font-semibold">Freight Broker Service</h3>
+                <div class="space-y-1 leadi">
+                    <p>Offered by us are reliable services for Combine Sea Air Logistics Services. for this, we have associations with reliable carriers that support us in safely delivering the goods to the desired place in a timely manner. </p>
+                    <!-- <p>Tempore quasi porro</p>
+                    <p>Blanditiis aut mollitia ex</p> -->
+                </div>
+            </div>
+            <div class="flex flex-col items-center p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8 dark:text-violet-400">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="my-3 text-3xl font-semibold">Door To Porl Service</h3>
                 <div class="space-y-1 leadi">
                     <p>Offered by us are reliable services for Combine Sea Air Logistics Services. for this, we have associations with reliable carriers that support us in safely delivering the goods to the desired place in a timely manner. </p>
                     <!-- <p>Tempore quasi porro</p>
@@ -616,7 +604,27 @@
         </p>
       </div>
     </footer>
+<script>
+const video = document.getElementById('myVideo');
+const videos = [
+    'Image/23759-337232393_small.mp4',
+    'Image/24255-341474048_small.mp4',
+    'Image/container_terminal_-_23008 (1080p).mp4'
+];
 
-    
+let videoIndex = 0;
+
+video.src = videos[videoIndex];
+
+video.addEventListener('ended', () => {
+    videoIndex++;
+    if (videoIndex < videos.length) {
+        video.src = videos[videoIndex];
+        video.play();
+    }
+});
+
+</script>
+    <script src="script.js"></script>
   </body>
 </html>
